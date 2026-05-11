@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Energy Dashboard</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Header and main navigation -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <div class="navbar-logo">
+                <a href="index.html">Energy Dashboard</a>
+            </div>
+
+            <ul class="navbar-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="usage.html">Usage</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="goals.html">Goals</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="testing.html">Testing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main page content -->
+    <main class="home-page">
+
+        <!-- Page introduction -->
+        <section class="home-intro" id="home-introduction">
+            <div class="section-content">
+                <h1>Your Weekly Energy Summary</h1>
+
+                <p>
+                    See a quick summary of your household energy use, savings, and progress.
+                </p>
+            </div>
+        </section>
+
+        <!-- Weekly energy comparison -->
+        <section class="summary-card weekly-comparison-card" id="weekly-comparison">
+            <div class="card-content">
+                <h2>This Week vs Last Week</h2>
+
+                <div class="mini-graph" id="energy-comparison-graph" aria-label="Bar graph comparing this week's energy use to last week's energy use">
+                    <div class="graph-bars">
+
+                        <div class="graph-bar-group">
+                            <div 
+                                class="graph-bar last-week-bar" 
+                                id="last-week-bar"
+                                data-energy-value="100">
+                            </div>
+
+                            <p class="graph-label">Last Week</p>
+                        </div>
+
+                        <div class="graph-bar-group">
+                            <div 
+                                class="graph-bar this-week-bar" 
+                                id="this-week-bar"
+                                data-energy-value="80">
+                            </div>
+
+                            <p class="graph-label">This Week</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Text summary shown below the graph -->
+                <div class="summary-message" id="energy-summary-message">
+                    <p>
+                        ↓ You used <strong>20% less energy</strong> this week.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly savings summary -->
+        <section class="summary-card savings-card" id="weekly-savings">
+            <div class="card-content">
+                <h2>Weekly Savings</h2>
+
+                <p class="summary-highlight">
+                    💰 You saved <strong>$10</strong> this week.
+                </p>
+            </div>
+        </section>
+
+        <!-- Weekly reward summary -->
+        <section class="summary-card reward-card" id="weekly-reward">
+            <div class="card-content">
+                <h2>Weekly Reward</h2>
+
+                <p class="summary-highlight">
+                    🌱 Reward: <strong>1 Tree Planted</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Quick navigation actions -->
+        <section class="home-actions" id="quick-actions">
+            <div class="section-content">
+                <h2>What would you like to do next?</h2>
+
+                <div class="action-link-list">
+                    <a href="usage.html" class="action-link">View Usage</a>
+                    <a href="goals.html" class="action-link">Set a Goal</a>
+                    <a href="tips.html" class="action-link">Read Saving Tips</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Energy Dashboard. Created for 2008ICT Design Thinking in IT.</p>
+    </footer>
+</body>
+</html>
