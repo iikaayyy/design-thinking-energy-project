@@ -1,1 +1,396 @@
+/* ==================================================
+   WattBuddy / Energy Dashboard Styles
+   Purpose: reusable, responsive, accessible design
+   ================================================== */
 
+/* CSS variables make the website easier to maintain */
+:root {
+    --primary-green: #4CAF50;
+    --secondary-blue: #386186;
+    --accent-teal: #1ABC9C;
+    --soft-green: #EAF8EF;
+    --soft-blue: #EAF3FA;
+    --cream: #FFFDF7;
+    --white: #FFFFFF;
+    --dark-text: #1F2937;
+    --body-text: #475569;
+    --muted-text: #64748B;
+    --border: #DDE7E3;
+
+    --shadow-soft: 0 8px 24px rgba(56, 97, 134, 0.12);
+    --shadow-hover: 0 12px 30px rgba(56, 97, 134, 0.18);
+
+    --radius-small: 12px;
+    --radius-medium: 20px;
+    --radius-large: 30px;
+
+    --max-width: 1150px;
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, var(--cream), var(--soft-green));
+    color: var(--body-text);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Accessibility: visible keyboard focus */
+a:focus,
+button:focus {
+    outline: 3px solid var(--accent-teal);
+    outline-offset: 4px;
+}
+
+/* =========================
+   Header and Navigation
+   ========================= */
+
+.site-header {
+    background-color: var(--white);
+    box-shadow: var(--shadow-soft);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-logo a {
+    color: var(--primary-green);
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.6rem;
+}
+
+.navbar-links a {
+    color: var(--dark-text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+}
+
+.navbar-links a:hover,
+.navbar-links a[aria-current="page"] {
+    background-color: var(--soft-green);
+    color: var(--primary-green);
+}
+
+/* =========================
+   General Layout
+   ========================= */
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.section-content,
+.card-content,
+.about-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.home-intro,
+.about-hero,
+.tips-hero {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    border-radius: var(--radius-large);
+    background: linear-gradient(135deg, var(--soft-green), var(--soft-blue));
+    margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--dark-text);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Cards
+   ========================= */
+
+.summary-card,
+.about-section,
+.tips-section {
+    background-color: var(--white);
+    border-radius: var(--radius-medium);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border);
+}
+
+.summary-card:hover,
+.feature-card:hover,
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.summary-card,
+.feature-card,
+.tip-card {
+    transition: 0.25s ease;
+}
+
+.summary-highlight {
+    font-size: 1.3rem;
+    background-color: var(--soft-green);
+    padding: 1rem;
+    border-radius: var(--radius-small);
+    color: var(--dark-text);
+}
+
+/* =========================
+   Home Page Graph
+   ========================= */
+
+.mini-graph {
+    background-color: var(--soft-blue);
+    border-radius: var(--radius-medium);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.graph-bars {
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+}
+
+.graph-bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.graph-bar {
+    width: 75px;
+    border-radius: 16px 16px 0 0;
+}
+
+.last-week-bar {
+    height: 180px;
+    background-color: var(--secondary-blue);
+}
+
+.this-week-bar {
+    height: 140px;
+    background-color: var(--primary-green);
+}
+
+.graph-label {
+    margin-top: 0.7rem;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.summary-message {
+    background-color: var(--soft-green);
+    border-left: 6px solid var(--primary-green);
+    padding: 1rem;
+    border-radius: var(--radius-small);
+}
+
+/* =========================
+   Buttons / Action Links
+   ========================= */
+
+.action-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.action-link {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.85rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: var(--shadow-soft);
+}
+
+.action-link:hover {
+    background-color: var(--accent-teal);
+    transform: translateY(-3px);
+}
+
+/* =========================
+   About Page
+   ========================= */
+
+.feature-list,
+.tips-card-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.feature-card,
+.tip-card {
+    background-color: var(--soft-green);
+    padding: 1.4rem;
+    border-radius: var(--radius-medium);
+    border: 1px solid var(--border);
+}
+
+.feature-card h3,
+.tip-card h3 {
+    color: var(--secondary-blue);
+}
+
+/* =========================
+   Tips Page
+   ========================= */
+
+.tips-list {
+    background-color: var(--soft-blue);
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+    border-radius: var(--radius-medium);
+}
+
+.tips-list li {
+    margin-bottom: 0.8rem;
+}
+
+.tips-reminder {
+    text-align: center;
+    background: linear-gradient(135deg, var(--soft-green), var(--soft-blue));
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+.site-footer {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 5%;
+    margin-top: 2rem;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+
+@media (max-width: 950px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-links {
+        justify-content: center;
+    }
+
+    .feature-list,
+    .tips-card-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    main {
+        padding: 1rem 4%;
+    }
+
+    .home-intro,
+    .about-hero,
+    .tips-hero {
+        padding: 2.5rem 1rem;
+    }
+
+    .summary-card,
+    .about-section,
+    .tips-section {
+        padding: 1.3rem;
+    }
+
+    .feature-list,
+    .tips-card-list {
+        grid-template-columns: 1fr;
+    }
+
+    .graph-bars {
+        gap: 1.5rem;
+    }
+
+    .graph-bar {
+        width: 55px;
+    }
+
+    .action-link-list {
+        flex-direction: column;
+    }
+
+    .action-link {
+        width: 100%;
+        text-align: center;
+    }
+}
