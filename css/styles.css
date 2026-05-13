@@ -640,3 +640,170 @@ select:focus {
     align-items: center;
   }
 }
+.tips-page {
+  background: #f8fffb;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+/* Hero section */
+.tips-hero {
+  text-align: center;
+  padding: 5rem 5% 3rem;
+}
+
+.tips-hero h1 {
+  font-size: 3rem;
+  color: var(--secondary-blue);
+  margin-bottom: 1rem;
+}
+
+.tips-hero p {
+  max-width: 760px;
+  margin: auto;
+  color: var(--body-text);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Main section spacing */
+.tips-section {
+  padding: 1rem 5% 3rem;
+}
+
+.tips-section h2 {
+  text-align: center;
+  color: var(--secondary-blue);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Card layout */
+.tips-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Individual tip cards */
+.tip-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-medium);
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: var(--shadow-strong);
+}
+
+.tip-card h3 {
+  color: var(--secondary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.tip-card p {
+  color: var(--body-text);
+  line-height: 1.7;
+}
+
+/* Daily habits list */
+.tips-list {
+  max-width: 850px;
+  margin: auto;
+
+  background: white;
+  padding: 2rem 2.5rem;
+
+  border-radius: var(--radius-medium);
+
+  box-shadow: var(--shadow-soft);
+
+  border: 1px solid var(--border);
+}
+
+.tips-list li {
+  margin-bottom: 1rem;
+  color: var(--body-text);
+  line-height: 1.7;
+}
+
+/* Reminder section */
+.tips-reminder {
+  text-align: center;
+}
+
+.tips-reminder p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+
+  color: var(--body-text);
+  line-height: 1.8;
+}
+
+/* Action buttons */
+.action-link-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.action-link {
+  display: inline-block;
+
+  padding: 1rem 2rem;
+
+  background: linear-gradient(135deg, var(--accent-teal), var(--primary-green));
+
+  color: white;
+  text-decoration: none;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.action-link:hover {
+  transform: translateY(-4px);
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tips-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .tips-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .tip-card {
+    padding: 1.5rem;
+  }
+
+  .tips-list {
+    padding: 1.5rem;
+  }
+
+  .action-link-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
