@@ -1101,3 +1101,33 @@ select:focus {
   box-shadow: var(--shadow-soft);
   font-weight: 500;
 }
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  color: var(--secondary-blue);
+}
+
+.brand-logo img {
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
+}
+
+.brand-logo span {
+  background: linear-gradient(90deg, var(--secondary-blue), var(--accent-teal));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.brand-logo:hover {
+  transform: translateY(-1px);
+  transition: 0.25s ease;
+}
