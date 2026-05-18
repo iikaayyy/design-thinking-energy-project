@@ -124,6 +124,13 @@
   transform: translateY(-4px);
 }
 
+.dashboard-welcome {
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+
 /* Responsive dashboard layout */
 @media (max-width: 768px) {
   .home-intro h1 {
