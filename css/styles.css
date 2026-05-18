@@ -553,18 +553,6 @@ select:focus {
   border-radius: 18px 18px 0 0;
 }
 
-/* Last week bar */
-.last-week-bar {
-  height: 180px;
-  background: #bfd7ea;
-}
-
-/* This week bar */
-.this-week-bar {
-  height: 140px;
-  background: linear-gradient(180deg, var(--accent-teal), var(--primary-green));
-}
-
 .graph-label {
   margin-top: 1rem;
   font-weight: 600;

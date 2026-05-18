@@ -1,0 +1,149 @@
+/* Styles used only by dashboard.html */
+
+/* Dashboard page background */
+.dashboard-page {
+  background: #f8fffb;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+/* Intro section */
+.dashboard-intro {
+  text-align: center;
+  padding: 5rem 5% 2rem;
+}
+
+.dashboard-intro h1 {
+  font-size: 3rem;
+  color: var(--secondary-blue);
+  margin-bottom: 1rem;
+}
+
+.dashboard-intro p {
+  color: var(--body-text);
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.05rem;
+}
+
+/* Summary cards */
+.summary-card {
+  background: white;
+  margin: 2rem auto;
+  width: min(1100px, 90%);
+  padding: 2rem;
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+}
+
+.card-content h2 {
+  color: var(--secondary-blue);
+  margin-bottom: 1.5rem;
+}
+
+/* Graph layout */
+.graph-bars {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5rem;
+  margin: 2rem 0;
+  min-height: 220px;
+}
+
+.graph-bar-group {
+  text-align: center;
+}
+
+.graph-bar {
+  width: 90px;
+  border-radius: 18px 18px 0 0;
+}
+
+/* Last week graph bar */
+.last-week-bar {
+  height: 180px;
+  background: #bfd7ea;
+}
+
+/* This week graph bar */
+.this-week-bar {
+  height: 140px;
+  background: linear-gradient(180deg, var(--accent-teal), var(--primary-green));
+}
+
+.graph-label {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+/* Summary text */
+.summary-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--dark-text);
+}
+
+.summary-highlight {
+  font-size: 1.2rem;
+  color: var(--dark-text);
+}
+
+/* Action section */
+.dashboard-actions {
+  text-align: center;
+  padding: 3rem 5%;
+}
+
+.dashboard-actions h2 {
+  margin-bottom: 2rem;
+  color: var(--secondary-blue);
+}
+
+.action-link-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.action-link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--accent-teal), var(--primary-green));
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.action-link:hover {
+  transform: translateY(-4px);
+}
+
+/* Responsive dashboard layout */
+@media (max-width: 768px) {
+  .home-intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .graph-bars {
+    gap: 2rem;
+  }
+
+  .graph-bar {
+    width: 60px;
+  }
+
+  .summary-card {
+    padding: 1.5rem;
+  }
+
+  .action-link-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
