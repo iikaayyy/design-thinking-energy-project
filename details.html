@@ -15,7 +15,7 @@
             <h1>Set Up Your Energy Profile</h1>
 
             <p>
-                Tell us a little about your household so WattBuddy can personalise your dashboard.
+                Answer a few optional questions so WattBuddy can better understand your household energy habits.
             </p>
 
             <form action="dashboard.html" method="get" class="setup-form">
@@ -23,45 +23,72 @@
                 <label for="name">Your name</label>
                 <input type="text" id="name" name="name" placeholder="e.g. Khushi">
 
-                <label for="household">Household size</label>
-                <select id="household" name="household">
+                <label for="rooms">Number of rooms in your home</label>
+                <select id="rooms" name="rooms">
                     <option value="">Choose one</option>
-                    <option>1 person</option>
-                    <option>2 people</option>
-                    <option>3-4 people</option>
-                    <option>5+ people</option>
+                    <option>1-2 rooms</option>
+                    <option>3-4 rooms</option>
+                    <option>5-6 rooms</option>
+                    <option>7+ rooms</option>
+                </select>
+
+                <label for="weather">What is your usual weather like?</label>
+                <select id="weather" name="weather">
+                    <option value="">Choose one</option>
+                    <option>Mostly hot</option>
+                    <option>Mostly cold</option>
+                    <option>Mixed weather</option>
+                    <option>Not sure</option>
+                </select>
+
+                <label for="temperature-use">Do you use heating or air conditioning often?</label>
+                <select id="temperature-use" name="temperature-use">
+                    <option value="">Choose one</option>
+                    <option>Air conditioning often</option>
+                    <option>Heating often</option>
+                    <option>Both depending on weather</option>
+                    <option>Rarely use either</option>
+                </select>
+
+                <label for="average-use">Current average energy use</label>
+                <input type="text" id="average-use" name="average-use" placeholder="e.g. 18 kWh per day">
+
+                <label for="appliances">Heavy appliances used regularly</label>
+                <select id="appliances" name="appliances">
+                    <option value="">Choose one</option>
+                    <option>Washing machine / dryer</option>
+                    <option>Air conditioner / heater</option>
+                    <option>Gaming PC / large TV setup</option>
+                    <option>Multiple heavy appliances</option>
+                    <option>Not sure</option>
                 </select>
 
                 <label for="goal">Main energy goal</label>
                 <select id="goal" name="goal">
                     <option value="">Choose one</option>
-                    <option>Save money</option>
-                    <option>Reduce energy use</option>
-                    <option>Build better habits</option>
-                    <option>Help the environment</option>
-                </select>
-
-                <label for="usage">Current usage level</label>
-                <select id="usage" name="usage">
-                    <option value="">Choose one</option>
-                    <option>Low</option>
-                    <option>Medium</option>
-                    <option>High</option>
-                    <option>Not sure</option>
+                    <option>Save money on bills</option>
+                    <option>Reduce overall energy use</option>
+                    <option>Track high-usage appliances</option>
+                    <option>Build better daily habits</option>
+                    <option>Reduce environmental impact</option>
                 </select>
 
                 <button type="submit" class="primary-btn">Continue to Dashboard</button>
 
                 <a href="dashboard.html" class="skip-link">Skip for now</a>
+
             </form>
         </section>
 
-    </main>
+        <div class="or-divider">
+            <span>OR</span>
+        </div>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <p>&copy; 2026 WattBuddy. Created for 2008ICT Design Thinking in IT.</p>
-    </footer>
-    <script src="js/script.js"></script>
+        <div class="quick-access-buttons">
+            <button class="google-btn" type="button">Continue with Google</button>
+            <button class="email-btn" type="button">Continue with Email</button>
+        </div>
+
+    </main>
 </body>
 </html>
