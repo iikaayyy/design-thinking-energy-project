@@ -52,7 +52,11 @@
           <h2 id="current-goals-heading">Current Goals</h2>
 
           <div class="goals-grid">
-            <article class="goal-card">
+            <a
+              href="usage.html"
+              class="goal-card card-link"
+              aria-label="Open usage page to review energy reduction progress"
+            >
               <h3>Reduce Energy Usage</h3>
               <p>Goal: Reduce energy usage by 10% this week.</p>
 
@@ -68,9 +72,14 @@
               </div>
 
               <p class="progress-label">Progress: 60%</p>
-            </article>
+              <span class="card-action">Review Usage</span>
+            </a>
 
-            <article class="goal-card">
+            <a
+              href="tips.html#daily-habit-tips"
+              class="goal-card card-link"
+              aria-label="Open daily habit tips for turning off unused devices"
+            >
               <h3>Turn Off Devices</h3>
               <p>Remember to turn off unused devices every night.</p>
 
@@ -86,14 +95,20 @@
               </div>
 
               <p class="progress-label">Progress: 80%</p>
-            </article>
+              <span class="card-action">View Habits</span>
+            </a>
 
-            <article class="goal-card reward-goal-card">
+            <a
+              href="dashboard.html"
+              class="goal-card reward-goal-card card-link"
+              aria-label="Open dashboard to view weekly reward summary"
+            >
               <h3>Weekly Reward</h3>
               <p>🔥 3 Day Streak</p>
               <p>🌱 1 Tree Planted</p>
               <p>Keep completing small habits to unlock the next weekly reward.</p>
-            </article>
+              <span class="card-action">Open Dashboard</span>
+            </a>
           </div>
         </div>
       </section>
@@ -146,9 +161,9 @@
           <h2 id="badges-heading">Badges</h2>
 
           <div class="achievement-card-grid">
-            <div class="achievement-card">🌱 Eco Beginner</div>
-            <div class="achievement-card">⚡ Energy Saver</div>
-            <div class="achievement-card">🔥 5 Day Streak</div>
+            <a href="tips.html" class="achievement-card card-link">🌱 Eco Beginner</a>
+            <a href="usage.html" class="achievement-card card-link">⚡ Energy Saver</a>
+            <a href="dashboard.html" class="achievement-card card-link">🔥 5 Day Streak</a>
           </div>
         </div>
       </section>
