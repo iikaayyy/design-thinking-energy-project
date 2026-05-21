@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Goals | WattBuddy</title>
 
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/goals.css">
-</head>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/goals.css" />
+  </head>
 
-<body>
-  
+  <body>
     <header class="site-header" id="site-header">
       <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-logo">
@@ -23,7 +23,7 @@
           <li><a href="index.html" data-page="index">Home</a></li>
           <li><a href="usage.html" data-page="usage">Usage</a></li>
           <li><a href="tips.html" data-page="tips">Tips</a></li>
-          <li><a href="goals.html" data-page="goals">Goals</a></li>
+          <li><a href="goals.html" data-page="goals" aria-current="page">Goals</a></li>
           <li><a href="dashboard.html" data-page="dashboard">Dashboard</a></li>
           <li><a href="about.html" data-page="about">About</a></li>
 
@@ -36,135 +36,143 @@
       </nav>
     </header>
 
- 
     <main class="goals-page">
+      <section class="goals-hero">
+        <div class="section-content">
+          <h1>🎯 Set Your Energy Goals</h1>
 
-
-        <section class="goals-hero">
-            <div class="section-content">
-                <h1>🎯 Set Your Energy Goals</h1>
-
-                <p>
-                    Build small and realistic habits to reduce household energy usage over time.
-                </p>
-            </div>
-        </section>
-
-        <section class="goals-section">
-            <div class="section-content goals-grid">
-
-                <article class="goal-card">
-                    <h2>Reduce Energy Usage</h2>
-                    <p>Goal: Reduce energy usage by 10%</p>
-
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%;"></div>
-                    </div>
-
-                    <p>Progress: 60%</p>
-                </article>
-
-                <article class="goal-card">
-                    <h2>Turn Off Devices</h2>
-                    <p>Remember to turn off unused devices every night.</p>
-
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%;"></div>
-                    </div>
-
-                    <p>Progress: 80%</p>
-                </article>
-
-                <article class="goal-card">
-                    <h2>Weekly Reward</h2>
-                    <p>🔥 3 Day Streak</p>
-                    <p>🌱 1 Tree Planted</p>
-                </article>
-
-            </div>
-
-    <section class="achievement-section">
-
-        <div class="achievement-box">
-            <h3>🔥 5 Day Streak</h3>
-            <p>You completed your goals for 5 days in a row.</p>
+          <p>
+            Build small and realistic habits to reduce household energy usage over time.
+          </p>
         </div>
+      </section>
 
-        <div class="achievement-box">
-            <h3>🌱 Environmental Impact</h3>
-            <p>2 trees protected through reduced energy use.</p>
+      <section class="goals-section" aria-labelledby="current-goals-heading">
+        <div class="section-content">
+          <h2 id="current-goals-heading">Current Goals</h2>
+
+          <div class="goals-grid">
+            <article class="goal-card">
+              <h3>Reduce Energy Usage</h3>
+              <p>Goal: Reduce energy usage by 10% this week.</p>
+
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-label="Reduce energy usage progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="60"
+              >
+                <div class="progress-fill" style="width: 60%"></div>
+              </div>
+
+              <p class="progress-label">Progress: 60%</p>
+            </article>
+
+            <article class="goal-card">
+              <h3>Turn Off Devices</h3>
+              <p>Remember to turn off unused devices every night.</p>
+
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-label="Turn off devices progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="80"
+              >
+                <div class="progress-fill" style="width: 80%"></div>
+              </div>
+
+              <p class="progress-label">Progress: 80%</p>
+            </article>
+
+            <article class="goal-card reward-goal-card">
+              <h3>Weekly Reward</h3>
+              <p>🔥 3 Day Streak</p>
+              <p>🌱 1 Tree Planted</p>
+              <p>Keep completing small habits to unlock the next weekly reward.</p>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="achievement-box">
-            <h3>💰 Estimated Savings</h3>
-            <p>You saved approximately $18 this month.</p>
+      <section class="goals-section" aria-labelledby="weekly-progress-heading">
+        <div class="section-content progress-panel">
+          <h2 id="weekly-progress-heading">Weekly Goal Progress</h2>
+
+          <div
+            class="progress-days"
+            role="list"
+            aria-label="Weekly goal progress from Monday to Sunday"
+          >
+            <div class="day active" role="listitem" aria-label="Monday complete">Mon</div>
+            <div class="day active" role="listitem" aria-label="Tuesday complete">Tue</div>
+            <div class="day active" role="listitem" aria-label="Wednesday complete">Wed</div>
+            <div class="day" role="listitem" aria-label="Thursday not complete yet">Thu</div>
+            <div class="day" role="listitem" aria-label="Friday not complete yet">Fri</div>
+            <div class="day" role="listitem" aria-label="Saturday not complete yet">Sat</div>
+            <div class="day" role="listitem" aria-label="Sunday not complete yet">Sun</div>
+          </div>
         </div>
+      </section>
 
-    </section>
+      <section class="goals-section" aria-labelledby="impact-heading">
+        <div class="section-content">
+          <h2 id="impact-heading">Achievements and Impact</h2>
 
-</section>
-        </section>
+          <div class="achievement-grid">
+            <article class="achievement-box">
+              <h3>🔥 5 Day Streak</h3>
+              <p>You completed your goals for 5 days in a row.</p>
+            </article>
 
-  
-        <section class="goals-section">
-            <div class="section-content">
+            <article class="achievement-box">
+              <h3>🌱 Environmental Impact</h3>
+              <p>2 trees protected through reduced energy use.</p>
+            </article>
 
-                <div class="goal-reminder-box">
-                    Small changes can make a big difference over time.
-                </div>
-
-            </div>
-        </section>
-        <section class="daily-progress-section">
-
-    <h2>Weekly Goal Progress</h2>
-
-    <div class="progress-days">
-
-        <div class="day active">Mon</div>
-        <div class="day active">Tue</div>
-        <div class="day active">Wed</div>
-        <div class="day">Thu</div>
-        <div class="day">Fri</div>
-        <div class="day">Sat</div>
-        <div class="day">Sun</div>
-
-    </div>
-
-</section>
-<section class="achievement-section">
-
-    <h2>Achievements</h2>
-
-    <div class="achievement-grid">
-
-        <div class="achievement-card">
-            🌱 Eco Beginner
+            <article class="achievement-box">
+              <h3>💰 Estimated Savings</h3>
+              <p>You saved approximately $18 this month.</p>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="achievement-card">
-            ⚡ Energy Saver
+      <section class="goals-section" aria-labelledby="badges-heading">
+        <div class="section-content achievement-section">
+          <h2 id="badges-heading">Badges</h2>
+
+          <div class="achievement-card-grid">
+            <div class="achievement-card">🌱 Eco Beginner</div>
+            <div class="achievement-card">⚡ Energy Saver</div>
+            <div class="achievement-card">🔥 5 Day Streak</div>
+          </div>
         </div>
+      </section>
 
-        <div class="achievement-card">
-            🔥 5 Day Streak
+      <section class="goals-section">
+        <div class="section-content">
+          <div class="goal-reminder-box">
+            Small changes can make a big difference over time.
+          </div>
+
+          <div class="motivation-box">
+            Great progress this week! Small habits create long-term savings.
+          </div>
+
+          <div class="action-link-list goals-actions">
+            <a href="usage.html" class="action-link">Review Usage</a>
+            <a href="tips.html" class="action-link">Read Saving Tips</a>
+          </div>
         </div>
-
-    </div>
-
-</section>
-<div class="motivation-box">
-
-    Great progress this week!  
-    Small habits create long-term savings.
-
-</div>
-
+      </section>
     </main>
 
-
     <footer class="site-footer">
-        <p>&copy; 2026 WattBuddy. Created for 2008ICT Design Thinking in IT.</p>
+      <p>&copy; 2026 WattBuddy. Created for 2008ICT Design Thinking in IT.</p>
     </footer>
-</body>
+  </body>
 </html>

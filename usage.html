@@ -21,7 +21,7 @@
 
         <ul class="navbar-links">
           <li><a href="index.html" data-page="index">Home</a></li>
-          <li><a href="usage.html" data-page="usage">Usage</a></li>
+          <li><a href="usage.html" data-page="usage" aria-current="page">Usage</a></li>
           <li><a href="tips.html" data-page="tips">Tips</a></li>
           <li><a href="goals.html" data-page="goals">Goals</a></li>
           <li><a href="dashboard.html" data-page="dashboard">Dashboard</a></li>
@@ -47,44 +47,48 @@
         </div>
       </section>
 
-      <section class="usage-section">
+      <section class="usage-section" aria-labelledby="weekly-usage-heading">
         <div class="section-content">
-          <h2>Weekly Energy Usage</h2>
+          <h2 id="weekly-usage-heading">Weekly Energy Usage</h2>
 
-          <div class="usage-chart">
+          <div
+            class="usage-chart"
+            role="img"
+            aria-label="Weekly energy usage chart. Monday 18 kilowatt hours, Tuesday 24, Wednesday 14, Thursday 20, Friday 12, Saturday 22, Sunday 16."
+          >
             <div class="usage-bar-group">
-              <div class="usage-bar" style="height: 90px"></div>
-              <p>Mon</p>
+              <div class="usage-bar" style="height: 90px" aria-hidden="true"></div>
+              <p><span>Mon</span><strong>18 kWh</strong></p>
             </div>
 
             <div class="usage-bar-group">
-              <div class="usage-bar" style="height: 120px"></div>
-              <p>Tue</p>
+              <div class="usage-bar peak-usage-bar" style="height: 120px" aria-hidden="true"></div>
+              <p><span>Tue</span><strong>24 kWh</strong></p>
             </div>
 
             <div class="usage-bar-group">
-              <div class="usage-bar" style="height: 70px"></div>
-              <p>Wed</p>
+              <div class="usage-bar" style="height: 70px" aria-hidden="true"></div>
+              <p><span>Wed</span><strong>14 kWh</strong></p>
             </div>
 
             <div class="usage-bar-group">
-              <div class="usage-bar" style="height: 100px"></div>
-              <p>Thu</p>
+              <div class="usage-bar" style="height: 100px" aria-hidden="true"></div>
+              <p><span>Thu</span><strong>20 kWh</strong></p>
             </div>
 
             <div class="usage-bar-group">
-              <div class="usage-bar" style="height: 60px"></div>
-              <p>Fri</p>
+              <div class="usage-bar" style="height: 60px" aria-hidden="true"></div>
+              <p><span>Fri</span><strong>12 kWh</strong></p>
             </div>
 
             <div class="usage-bar-group">
-              <div class="usage-bar" style="height: 110px"></div>
-              <p>Sat</p>
+              <div class="usage-bar" style="height: 110px" aria-hidden="true"></div>
+              <p><span>Sat</span><strong>22 kWh</strong></p>
             </div>
 
             <div class="usage-bar-group">
-              <div class="usage-bar" style="height: 80px"></div>
-              <p>Sun</p>
+              <div class="usage-bar" style="height: 80px" aria-hidden="true"></div>
+              <p><span>Sun</span><strong>16 kWh</strong></p>
             </div>
           </div>
         </div>
@@ -94,27 +98,30 @@
         <div class="section-content usage-grid">
           <article class="usage-card">
             <h3>This Week</h3>
-            <p>80 kWh used</p>
+            <p><strong>80 kWh</strong> used</p>
           </article>
 
           <article class="usage-card">
             <h3>Last Week</h3>
-            <p>100 kWh used</p>
+            <p><strong>100 kWh</strong> used</p>
           </article>
 
           <article class="usage-card">
             <h3>Estimated Savings</h3>
-            <p>$10 saved</p>
+            <p><strong>$10</strong> saved</p>
           </article>
         </div>
       </section>
 
       <section class="usage-section">
         <div class="section-content">
-          <div class="alert-box">
-            ⚠ High usage detected on Tuesday.
-            <br />
-            Tip: Turn off unused lights and devices.
+          <div class="alert-box" role="status">
+            <h2>Usage Alert</h2>
+            <p>
+              ⚠ High usage detected on Tuesday. Your energy usage increased
+              compared with the rest of the week.
+            </p>
+            <p>Tip: Turn off unused lights and devices before peak evening hours.</p>
           </div>
         </div>
       </section>
@@ -124,48 +131,89 @@
           <div class="breakdown-list">
             <h3>Appliance Usage Breakdown</h3>
 
-            <ul>
-              <li>Air Conditioner — 40%</li>
-              <li>Kitchen — 25%</li>
-              <li>Laundry — 15%</li>
-              <li>Lighting — 20%</li>
+            <ul class="breakdown-items">
+              <li>
+                <span>Air Conditioner</span>
+                <strong>40%</strong>
+                <div class="breakdown-meter" aria-hidden="true">
+                  <div class="breakdown-fill" style="width: 40%"></div>
+                </div>
+              </li>
+              <li>
+                <span>Kitchen</span>
+                <strong>25%</strong>
+                <div class="breakdown-meter" aria-hidden="true">
+                  <div class="breakdown-fill" style="width: 25%"></div>
+                </div>
+              </li>
+              <li>
+                <span>Laundry</span>
+                <strong>15%</strong>
+                <div class="breakdown-meter" aria-hidden="true">
+                  <div class="breakdown-fill" style="width: 15%"></div>
+                </div>
+              </li>
+              <li>
+                <span>Lighting</span>
+                <strong>20%</strong>
+                <div class="breakdown-meter" aria-hidden="true">
+                  <div class="breakdown-fill" style="width: 20%"></div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </section>
+
       <section class="usage-section">
         <div class="section-content">
           <div class="notification-box">
-            ⚠️ Your energy usage increased on Tuesday.
+            💡 Pattern to watch: your highest usage occurs during evenings.
             <br />
-            Tip: Turn off unused lights and devices.
+            Consider reducing air conditioner usage after 8PM.
           </div>
         </div>
       </section>
-      <section class="top-usage-section">
-        <h2>Top Energy Usage</h2>
 
-        <div class="usage-list">
-          <div class="usage-item">
-            <span>Air Conditioner</span>
-            <span>40%</span>
-          </div>
+      <section class="usage-section top-usage-section">
+        <div class="section-content">
+          <h2>Top Energy Usage</h2>
 
-          <div class="usage-item">
-            <span>Kitchen</span>
-            <span>25%</span>
-          </div>
+          <div class="usage-list">
+            <div class="usage-item">
+              <span>Air Conditioner</span>
+              <span>40%</span>
+            </div>
 
-          <div class="usage-item">
-            <span>Laundry</span>
-            <span>15%</span>
+            <div class="usage-item">
+              <span>Kitchen</span>
+              <span>25%</span>
+            </div>
+
+            <div class="usage-item">
+              <span>Laundry</span>
+              <span>15%</span>
+            </div>
           </div>
         </div>
       </section>
-      <div class="insight-box">
-        💡 Your highest usage occurs during evenings. Consider reducing air
-        conditioner usage after 8PM.
-      </div>
+
+      <section class="usage-section">
+        <div class="section-content">
+          <div class="insight-box">
+            <h2>Next Step</h2>
+            <p>
+              Use this weekly pattern to set one realistic goal, then check the
+              dashboard next week to see whether your household habits improved.
+            </p>
+
+            <div class="action-link-list">
+              <a href="goals.html" class="action-link">Set a Goal</a>
+              <a href="tips.html" class="action-link">Read Saving Tips</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
