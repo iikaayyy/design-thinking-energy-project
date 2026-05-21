@@ -5,34 +5,67 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Dashboard | WattBuddy</title>
+    <title>Home | Energy Dashboard</title>
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/styles.css" />
-
-    <!-- Dashboard stylesheet -->
-    <link rel="stylesheet" href="css/dashboard.css" />
   </head>
 
   <body>
     <!-- Header and main navigation -->
-    <div id="navbar-container"></div>
+    <header class="site-header" id="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="navbar-logo">
+          <a href="index.html" class="brand-logo">
+            <img src="image/logo.png" alt="WattBuddy Logo" />
+            <span>WattBuddy</span>
+          </a>
+        </div>
+
+        <ul class="navbar-links">
+          <li><a href="index.html" data-page="index">Home</a></li>
+          <li><a href="usage.html" data-page="usage">Usage</a></li>
+          <li><a href="tips.html" data-page="tips">Tips</a></li>
+          <li><a href="goals.html" data-page="goals">Goals</a></li>
+          <li><a href="dashboard.html" data-page="dashboard">Dashboard</a></li>
+          <li><a href="about.html" data-page="about">About</a></li>
+
+          <li>
+            <a href="details.html" class="login-signup-btn" id="login-signup-btn">
+              Login / Sign Up
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Main page content -->
-    <main class="dashboard-page">
+    <main class="home-page">
       <!-- Page introduction -->
-      <section class="dashboard-intro" id="home-introduction">
+      <section class="home-intro" id="home-introduction">
         <div class="section-content">
-          <p class="dashboard-welcome" id="dashboard-welcome-message">
-            Welcome back!
-          </p>
-
           <h1>Your Weekly Energy Summary</h1>
 
           <p>
             See a quick summary of your household energy use, savings, and
             progress.
           </p>
+
+          <div class="profile-summary" id="profile-summary">
+            <h2>Sample Energy Profile</h2>
+
+            <p>Email: <strong>guest@wattbuddy.local</strong></p>
+            <p>Number of rooms: <strong>3-4 rooms</strong></p>
+            <p>Usual weather: <strong>Mixed weather</strong></p>
+            <p>Heating or air conditioning use: <strong>Both depending on weather</strong></p>
+            <p>Average energy use: <strong>18 kWh per day</strong></p>
+            <p>Heavy appliances: <strong>Multiple heavy appliances</strong></p>
+            <p>Main goal: <strong>Reduce overall energy use</strong></p>
+
+            <p class="profile-data-note">
+              This dashboard uses placeholder data for the static website version.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -102,7 +135,7 @@
       </section>
 
       <!-- Quick navigation actions -->
-      <section class="dashboard-actions" id="quick-actions">
+      <section class="home-actions" id="quick-actions">
         <div class="section-content">
           <h2>What would you like to do next?</h2>
 
@@ -119,8 +152,5 @@
     <footer class="site-footer">
       <p>&copy; 2026 WattBuddy. Created for 2008ICT Design Thinking in IT.</p>
     </footer>
-
-    <script src="js/script.js"></script>
-    <script src="js/dashboard.js"></script>
   </body>
 </html>
