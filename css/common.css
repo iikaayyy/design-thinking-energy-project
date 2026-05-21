@@ -35,6 +35,8 @@ body {
   color: var(--body-text);
 }
 
+/* Site-wide page transition. Pseudo-elements keep the logo intro
+   reusable without adding transition markup to every HTML page. */
 body::before,
 body::after {
   content: "";
@@ -238,6 +240,8 @@ select:focus {
   opacity: 0.95;
 }
 
+/* Reusable linked-card pattern for cards that navigate to a related
+   page while keeping the existing card styling and hover movement. */
 .card-link {
   display: block;
   color: inherit;
@@ -255,6 +259,14 @@ select:focus {
 .card-link:hover .card-action,
 .card-link:focus .card-action {
   color: var(--primary-green);
+}
+
+.card-link:focus-visible {
+  outline: 3px solid var(--accent-teal);
+  outline-offset: 6px;
+  box-shadow:
+    var(--shadow-strong),
+    0 0 0 6px rgba(26, 188, 156, 0.12);
 }
 
 .section-content {

@@ -125,6 +125,12 @@
   color: var(--secondary-blue);
 }
 
+.home-actions p {
+  max-width: 680px;
+  margin: 0 auto 2rem;
+  color: var(--body-text);
+}
+
 @media (max-width: 768px) {
   .home-intro h1 {
     font-size: 2.2rem;

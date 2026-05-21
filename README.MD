@@ -24,6 +24,14 @@ The project is built with HTML and CSS only. It does not require JavaScript, a d
 - Page transition effect with the WattBuddy logo.
 - Accessibility improvements including semantic sections, visible focus states, current-page navigation labels, and ARIA labels for charts/progress indicators.
 
+## Known Limitations
+
+- This is a static prototype, so user information is not saved.
+- The setup form uses sample/placeholder data and does not connect to a backend.
+- Usage, savings, rewards, and goal progress values are hardcoded for demonstration.
+- There is no real account authentication, password storage, or database connection.
+- The current version is designed to demonstrate the user journey and interface concept rather than live energy tracking.
+
 ## Testing Checklist
 
 Use this checklist before demonstration or submission:

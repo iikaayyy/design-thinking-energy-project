@@ -52,7 +52,12 @@
             progress.
           </p>
 
-          <div class="profile-summary" id="profile-summary">
+          <a
+            href="details.html"
+            class="profile-summary card-link"
+            id="profile-summary"
+            aria-label="Open setup form to update the sample energy profile"
+          >
             <h2>Sample Energy Profile</h2>
 
             <p>Email: <strong>guest@wattbuddy.local</strong></p>
@@ -66,14 +71,17 @@
             <p class="profile-data-note">
               This dashboard uses placeholder data for the static website version.
             </p>
-          </div>
+            <span class="card-action">Update Profile</span>
+          </a>
         </div>
       </section>
 
       <!-- Weekly energy comparison -->
-      <section
-        class="summary-card weekly-comparison-card"
+      <a
+        href="usage.html"
+        class="summary-card weekly-comparison-card card-link"
         id="weekly-comparison"
+        aria-label="Open usage page to explore this week versus last week"
       >
         <div class="card-content">
           <h2>This Week vs Last Week</h2>
@@ -110,35 +118,52 @@
           <div class="summary-message" id="energy-summary-message">
             <p>↓ You used <strong>20% less energy</strong> this week.</p>
           </div>
+          <span class="card-action">View Usage Details</span>
         </div>
-      </section>
+      </a>
 
       <!-- Weekly savings summary -->
-      <section class="summary-card savings-card" id="weekly-savings">
+      <a
+        href="goals.html"
+        class="summary-card savings-card card-link"
+        id="weekly-savings"
+        aria-label="Open goals page to turn weekly savings into a goal"
+      >
         <div class="card-content">
           <h2>Weekly Savings</h2>
 
           <p class="summary-highlight">
             💰 You saved <strong>$10</strong> this week.
           </p>
+          <span class="card-action">Set Savings Goal</span>
         </div>
-      </section>
+      </a>
 
       <!-- Weekly reward summary -->
-      <section class="summary-card reward-card" id="weekly-reward">
+      <a
+        href="goals.html#badges-heading"
+        class="summary-card reward-card card-link"
+        id="weekly-reward"
+        aria-label="Open goals page to view badges and weekly rewards"
+      >
         <div class="card-content">
           <h2>Weekly Reward</h2>
 
           <p class="summary-highlight">
             🌱 Reward: <strong>1 Tree Planted</strong>
           </p>
+          <span class="card-action">View Rewards</span>
         </div>
-      </section>
+      </a>
 
       <!-- Quick navigation actions -->
       <section class="home-actions" id="quick-actions">
         <div class="section-content">
           <h2>What would you like to do next?</h2>
+          <p>
+            Next recommended action: review the usage pattern, then choose one
+            goal for the week.
+          </p>
 
           <div class="action-link-list">
             <a href="usage.html" class="action-link">View Usage</a>
