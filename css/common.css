@@ -35,6 +35,33 @@ body {
   color: var(--body-text);
 }
 
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+body::before {
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(26, 188, 156, 0.16), transparent 38%),
+    var(--cream);
+  animation: pageTransitionOverlay 1s ease forwards;
+}
+
+body::after {
+  top: 50%;
+  left: 50%;
+  width: 82px;
+  height: 82px;
+  background: url("../image/logo.png") center / contain no-repeat;
+  filter: drop-shadow(0 12px 24px rgba(26, 188, 156, 0.22));
+  transform: translate(-50%, -50%) scale(0.86);
+  animation: pageTransitionLogo 1s ease forwards;
+}
+
 h1,
 h2,
 h3 {
@@ -225,6 +252,49 @@ select:focus {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pageTransitionOverlay {
+  0%,
+  58% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes pageTransitionLogo {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.72);
+  }
+
+  35% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  68% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation-duration: 0.01ms;
   }
 }
 
